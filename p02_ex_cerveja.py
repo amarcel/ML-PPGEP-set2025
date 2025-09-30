@@ -25,12 +25,15 @@ arvore.predict([[-5, 2, 1, 0]])
 
 # Exibição do desenho da árvore de decisão:
 import matplotlib.pyplot as plt
+from sklearn import tree
+
 plt.figure(dpi=400)
 
 tree.plot_tree(arvore,
                feature_names=entradas,
                class_names=arvore.classes_,
                filled=True)
+plt.show()
 
 # Exibição das probabilidades de predição de cada classe:
 proba = arvore.predict_proba([[-1, 1, 0, 0]])[0]
