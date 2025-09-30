@@ -21,7 +21,8 @@ a, b = regressor.intercept_, regressor.coef_[0]
 previsao_regressor = regressor.predict(X)
 
 # Cálculo da soma dos erros quadráticos (SEQ):
-seq = np.sum((df['nota'] - previsao_regressor)**2)
+import numpy as np
+seq = np.sum((y - previsao_regressor)**2)
 
 # Mostrando o gráfico de análise:
 import matplotlib.pyplot as plt
